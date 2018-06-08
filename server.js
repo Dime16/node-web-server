@@ -21,8 +21,8 @@ app.use((req, res, next) => {
 });
 
 // app.use((req, res, next) => {
-// 	res.render('maintance', {
-// 		pageTitle: "maintance"
+// 	res.render('maintenance', {
+// 		pageTitle: "maintenance"
 // 	});
 // });
 
@@ -42,6 +42,12 @@ app.get('/', (req, res) => {
 		welcomeMessage: 'Welcome user to this awesome page'
 	});  
 });
+
+app.get('/projects', (req, res) => {
+	res.render("projects.hbs", {
+		pageTitle : "Projects page."
+	})
+})
 
 app.get('/about', (req, res) => {
 	res.render("about.hbs", {
